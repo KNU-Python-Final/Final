@@ -1,4 +1,3 @@
-# 오잉
 import pygame
 import time
 
