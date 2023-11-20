@@ -147,7 +147,7 @@ while run:
     leaf_text = font.render('Leaf', True, (0, 0, 0)) # leaf_text 렌더링
     Santa_text = font.render('Santa', True, (0, 0, 0)) # Santo_text 렌더링
 
-    button_texts = [king_text, angel_text, leaf_text, Santa_text] # 
+    button_texts = [king_text, angel_text, leaf_text, Santa_text]
     button_positions = [(70, 215), (70, 475), (70, 345), (70, 605)] # 버튼의 위치 지정
     # button_texts, button_position을 결합하여 새로운 튜플 생성 >> text 와 text의 좌표를 생성
     for text, (x, y) in zip(button_texts, button_positions):
@@ -166,7 +166,7 @@ while run:
     if insufficient_score_message:
         current_time = time.time()
         if current_time - message_start_time <= 1:  # 1초간 메시지 표시
-            insufficient_score_text = font.render("kkrBB", True, (255, 0, 0))
+            insufficient_score_text = font.render("No score", True, (255, 0, 0))
             screen.blit(insufficient_score_text, (WIDTH / 2 - insufficient_score_text.get_width() / 2, HEIGHT / 2))
         else:
             insufficient_score_message = False  # 1초가 지나면 메시지 표시를 중단
